@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모자 프로필</title>
+  <link rel="stylesheet" href="./css/profile3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css">
+</head>
+<body>
+  <div id="wrap">
+    <div class="statusbar"> <!--상단바-->
+      <span class="clock">11:07</span>
+
+      <ul>
+        <li><i class="fa-solid fa-signal"></i></li>
+        <li><i class="fa-solid fa-wifi"></i></li>
+        <li><i class="fa-solid fa-battery-three-quarters"></i></li>
+      </ul>
+    </div>
+
+    <header>
+      <span><i class="fa-solid fa-xmark" onclick="window.history.back();"></i></span>
+    </header>
+    
+    <section>
+      <h2 class="sr-only">프로필</h2>
+      <div class="profile">
+        <p class="pic"><a href="./profileImg3.html">프로필사진</a></p>
+        <div class="info">
+          <span class="name">모자</span>
+          <span class="intro">상태메세지</span>
+        </div>
+      </div>
+      
+    </section>
+
+    <footer>
+      <ul>
+        <li>
+          <a href="">
+            <i class="fa-solid fa-comment"></i>
+            <span>1:1 채팅</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa-solid fa-phone"></i>
+            <span>통화하기</span>            
+          </a>
+        </li>
+      </ul>
+    </footer>
+
+
+  </div>
+
+  <script>
+    // 실시간시계
+    const $clock = document.querySelector('.statusbar>.clock');
+    const realtime = new Date();
+    let hour = realtime.getHours()%12;
+    let minutes = realtime.getMinutes();
+
+    if(hour<10) {
+      hour = '0'+hour;
+    }else{
+      hour = hour;
+    }
+
+    if(minutes<10) {
+      minutes = '0'+minutes;
+    }else{
+      minutes = minutes;
+    }
+    $clock.textContent = `${hour}:${minutes}`;
+  </script>
+</body>
+</html>

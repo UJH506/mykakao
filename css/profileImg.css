@@ -1,0 +1,75 @@
+@import "./reset.css";
+#addfriend > .statusbar,
+#wrap > .statusbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 992px;
+  height: 24px;
+  background-color: #fff;
+  z-index: 100;
+}
+#addfriend > .statusbar > .clock,
+#wrap > .statusbar > .clock {
+  position: absolute;
+  left: 20px;
+  font-size: 16px;
+  font-weight: 800;
+}
+#addfriend > .statusbar > ul,
+#wrap > .statusbar > ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  right: 15px;
+}
+#addfriend > .statusbar > ul > li,
+#wrap > .statusbar > ul > li {
+  margin: 0 4px;
+  font-size: 16px;
+}
+
+body {
+  background-color: #000;
+}
+
+#wrap {
+  width: 100%;
+  max-width: 992px;
+  margin: 0 auto;
+}
+#wrap > .statusbar {
+  width: 100%;
+  max-width: 992px;
+  color: #fff;
+  background-color: transparent;
+}
+#wrap > header {
+  position: absolute;
+  top: 24px;
+  height: 56px;
+  z-index: 100;
+}
+#wrap > header > span {
+  margin-left: 30px;
+  line-height: 56px;
+  color: #fff;
+  font-size: 20px;
+}
+#wrap > section {
+  position: absolute;
+  width: 100%;
+  max-width: 992px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#wrap > section > img {
+  width: 100%;
+  max-width: 992px;
+}/*# sourceMappingURL=profileImg.css.map */

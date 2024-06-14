@@ -1,0 +1,35 @@
+@charset "utf-8";
+@import "./_mixin";
+
+#addfriend,
+#wrap {
+  >.statusbar {
+    @include flexLayout();
+    align-items: center;
+    position: fixed;
+    top: 0;
+    @include varwidth();
+    height: 24px;
+    background-color: #fff;
+    z-index: 100;
+
+    >.clock {
+      position: absolute;
+      left: 20px;
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    >ul {
+      @include flexLayout();
+      position: absolute;
+      right: 15px;
+
+      >li {
+        margin: 0 4px;
+        font-size: 16px;
+        // border: 1px solid #000;
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>톡 서랍</title>
+  <link rel="stylesheet" href="./css/talkdrawer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css">
+  <script defer src="./js/talkdrawer.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div class="statusbar">
+      <span class="clock">11:07</span>
+
+      <ul>
+        <li><i class="fa-solid fa-signal"></i></li>
+        <li><i class="fa-solid fa-wifi"></i></li>
+        <li><i class="fa-solid fa-battery-three-quarters"></i></li>
+      </ul>
+    </div>
+
+    <header>
+      <div class="header-top">
+        <span><i onclick="window.history.back();" class="fa-solid fa-angle-left"></i></span>
+        <h1>채팅방 이름</h1>
+      </div>
+      
+      <div class="header-bottom">
+        <ul>
+          <li class="select"><a href="#">사진/동영상</a></li>
+          <li><a href="#">파일</a></li>
+          <li><a href="#">링크</a></li>
+        </ul>
+        <span></span>
+      </div>
+    </header>
+
+    <section>
+
+      <h2>사진/동영상</h2>
+      <ul>
+        <li><a href="#">사진1</a></li>
+        <li><a href="#">사진2</a></li>
+        <li><a href="#">사진3</a></li>
+        <li><a href="#">사진1</a></li>
+        <li><a href="#">사진2</a></li>
+      </ul>
+
+      <h2>파일</h2>
+      <ul>
+        <li><a href="#">파일1</a></li>
+        <li><a href="#">파일2</a></li>
+        <li><a href="#">파일3</a></li>
+        <li><a href="#">파일1</a></li>
+        <li><a href="#">파일2</a></li>
+        <li><a href="#">파일3</a></li>
+        <li><a href="#">파일1</a></li>
+      </ul>
+
+      <h2>링크</h2>
+      <ul>
+        <li><a href="#">링크1</a></li>
+        <li><a href="#">링크2</a></li>
+        <li><a href="#">링크3</a></li>
+        <li><a href="#">링크4</a></li>
+        <li><a href="#">링크5</a></li>
+        <li><a href="#">링크6</a></li>
+        <li><a href="#">링크7</a></li>
+        <li><a href="#">링크8</a></li>
+        <li><a href="#">링크9</a></li>
+      </ul>
+
+    </section>
+  </div>
+
+  <script>
+    // 실시간시계
+    const $clock = document.querySelector('.statusbar>.clock');
+    const realtime = new Date();
+    let hour = realtime.getHours()%12;
+    let minutes = realtime.getMinutes();
+
+    if(hour<10) {
+      hour = '0'+hour;
+    }else{
+      hour = hour;
+    }
+
+    if(minutes<10) {
+      minutes = '0'+minutes;
+    }else{
+      minutes = minutes;
+    }
+    $clock.textContent = `${hour}:${minutes}`;
+  </script>
+</body>
+</html>

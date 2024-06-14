@@ -1,0 +1,185 @@
+@import "./reset.css";
+@import "./reset.css";
+#addfriend > .statusbar,
+#wrap > .statusbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 992px;
+  height: 24px;
+  background-color: #fff;
+  z-index: 100;
+}
+#addfriend > .statusbar > .clock,
+#wrap > .statusbar > .clock {
+  position: absolute;
+  left: 20px;
+  font-size: 16px;
+  font-weight: 800;
+}
+#addfriend > .statusbar > ul,
+#wrap > .statusbar > ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  right: 15px;
+}
+#addfriend > .statusbar > ul > li,
+#wrap > .statusbar > ul > li {
+  margin: 0 4px;
+  font-size: 16px;
+}
+
+#addfriend > .statusbar,
+#wrap > .statusbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 992px;
+  height: 24px;
+  background-color: #fff;
+  z-index: 100;
+}
+#addfriend > .statusbar > .clock,
+#wrap > .statusbar > .clock {
+  position: absolute;
+  left: 20px;
+  font-size: 16px;
+  font-weight: 800;
+}
+#addfriend > .statusbar > ul,
+#wrap > .statusbar > ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  right: 15px;
+}
+#addfriend > .statusbar > ul > li,
+#wrap > .statusbar > ul > li {
+  margin: 0 4px;
+  font-size: 16px;
+}
+
+#wrap > header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 24px;
+  width: 100%;
+  max-width: 992px;
+  height: 56px;
+  background-color: #fff;
+}
+#wrap > header > span {
+  position: absolute;
+  left: 12px;
+}
+#wrap > header > span > i {
+  font-size: 20px;
+}
+#wrap > header > span > i:hover {
+  color: #888;
+}
+#wrap > header > h1 {
+  font-size: 20px;
+}
+
+#wrap section {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  max-width: 992px;
+}
+#wrap section > h2 {
+  padding: 5px 12px;
+  color: #999;
+  font-size: 12px;
+  font-weight: normal;
+}
+#wrap section > ul {
+  display: grid;
+  grid-template-rows: repeat(1, 60px);
+  grid-auto-rows: 60px;
+  margin-bottom: 25px;
+}
+#wrap section > ul > li {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 12px;
+  font-size: 15px;
+  font-weight: 400;
+}
+#wrap section > ul > li a {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 -12px;
+  padding: 0 12px;
+  width: 100%;
+  height: 100%;
+}
+#wrap section > ul > li a:hover > span {
+  color: gold;
+}
+#wrap section > ul > li a > span {
+  color: #aaa;
+  font-weight: 300;
+}
+#wrap section > ul > li a > span > i[class="fa-solid fa-rotate"] {
+  margin-right: 7px;
+  transition: transform 1s ease-in-out;
+}
+#wrap section > ul > li a > span > i {
+  font-size: 18px;
+  padding: 5px;
+}
+#wrap section > ul > li > .toggle > label {
+  display: inline-block;
+  position: relative;
+  width: 48px;
+  height: 26px;
+  text-indent: -9999px;
+  background-color: #dedede;
+  border-radius: 15px;
+}
+#wrap section > ul > li > .toggle > label::after {
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  background-color: #fff;
+  border-radius: 50%;
+  content: "";
+  transition: all 0.3s;
+}
+#wrap section > ul > li > .toggle > input:checked + label::after {
+  left: 24px;
+}
+#wrap section > ul > li > .toggle > input:checked + label {
+  background-color: gold;
+}
+#wrap section > ul > li > .toggle > input {
+  display: none;
+}/*# sourceMappingURL=setting.css.map */

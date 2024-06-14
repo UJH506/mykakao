@@ -1,0 +1,107 @@
+@charset "utf-8";
+@import "./reset.css", "./status", "./_mixin", "./subheader";
+
+#wrap {
+
+  section {
+    position: absolute;
+    top: 80px;
+    @include varwidth();
+    // border: 1px solid #000;
+
+    >h2 {
+      padding: 5px 12px;
+      color: #999;
+      font-size: 12px;
+      font-weight: normal;
+      // border: 1px solid #000;
+    } //h2
+
+    >ul {
+      display: grid;
+      grid-template-rows: repeat(1, 60px);
+      grid-auto-rows: 60px;
+      margin-bottom: 25px;
+
+      >li {
+        @include flexLayout();
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 0 12px;
+        font-size: 15px;
+        font-weight: 400;
+        // border: 1px solid #000;
+        
+        a {
+          @include flexLayout();
+          justify-content: space-between;
+          align-items: center;
+          margin: 0 -12px;
+          padding: 0 12px;
+          width: 100%;
+          height: 100%;
+          // border: 1px solid #000;
+
+          // &:hover {background-color: #f5f5f5;}
+          &:hover>span {color: gold;}
+
+          >span {
+            color: #aaa;
+            font-weight: 300;
+
+            &>i[class="fa-solid fa-rotate"] {
+              margin-right: 7px;
+              transition: transform 1s ease-in-out;
+            }
+
+            // &.refresh>i[class="fa-solid fa-rotate"] {
+            //   transform: rotate(360deg);
+            // }
+          }
+            
+          >span>i {
+            font-size: 18px;
+            padding: 5px;
+          }
+          
+        } //a
+
+        >.toggle {
+
+          >label {
+            display: inline-block;
+            position: relative;
+            width: 48px;
+            height: 26px;
+            text-indent: -9999px;
+            background-color: #dedede;
+            border-radius: 15px;
+          }
+
+          >label::after {
+            display: block;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 22px;
+            height: 22px;
+            background-color: #fff;
+            border-radius: 50%;
+            content: '';
+            transition: all 0.3s ;
+          }
+
+          >input:checked+label::after {
+            left: 24px;
+            
+          }
+
+          >input:checked+label {background-color: gold;}
+
+          >input {display: none;}
+        } //.toggle
+      } //li 날짜목록
+    } //ul 날짜분류
+  } //section
+}

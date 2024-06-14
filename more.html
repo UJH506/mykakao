@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>더보기</title>
+  <link rel="stylesheet" href="./css/morestyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css">
+</head>
+<body>
+  <div id="wrap">
+    <div class="statusbar">
+      <span class="clock">11:07</span>
+
+      <ul>
+        <li><i class="fa-solid fa-signal"></i></li>
+        <li><i class="fa-solid fa-wifi"></i></li>
+        <li><i class="fa-solid fa-battery-three-quarters"></i></li>
+      </ul>
+    </div>
+
+    <header>
+      <h1>더보기</h1>
+
+      <nav>
+        <ul>
+          <li><a href="./search.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+          <li><a href="#"><i class="fa-solid fa-qrcode"></i></a></li>
+          <li><a href="./setting.html"><i class="fa-solid fa-gear"></i></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <h2>뭐쓰지</h2>
+    </section>
+
+    <footer>
+      <ul>
+        <li><a href="./index.html"><i class="fa-regular fa-user"></i></a></li>
+        <li><a href="./chatlist.html"><i class="fa-regular fa-comments"></i></a></li>
+        <li><a href="./more.html"><i class="fa-solid fa-ellipsis"></i></a></li>
+      </ul>      
+    </footer>
+  </div>
+
+  <script>
+    // 실시간시계
+    const $clock = document.querySelector('.statusbar>.clock');
+    const realtime = new Date();
+    let hour = realtime.getHours()%12;
+    let minutes = realtime.getMinutes();
+
+    if(hour<10) {
+      hour = '0'+hour;
+    }else{
+      hour = hour;
+    }
+
+    if(minutes<10) {
+      minutes = '0'+minutes;
+    }else{
+      minutes = minutes;
+    }
+    $clock.textContent = `${hour}:${minutes}`;
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+@mixin flexLayout($direction:row, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin varwidth() {
+  width: 100%;
+  max-width: 992px;
+}
+
+#wrap {
+  >header {
+    @include flexLayout();
+    align-items: center;
+    position: fixed;
+    top: 24px;
+    @include varwidth();
+    height: 56px;
+    padding: 10px 0;
+    background-color: #fff;
+    z-index: 100;
+    
+    >h1 {
+      position: absolute;
+      left: 30px;
+    }
+
+    >nav {
+      position: absolute;
+      right: 12px;
+      width: 125px;
+      // border: 1px solid #000;
+
+      >ul {
+        @include flexLayout();
+        justify-content: space-between;
+        
+        
+        >li {
+          position: relative;
+          // border: 1px solid #000;
+
+          &:nth-child(2) {
+            padding-left: 5px;
+          }
+          >a {
+            font-size: 20px;
+            padding: 7px;
+            
+            &:hover::after {
+              display: block;
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%,-50%);
+              width: 35px;
+              height: 35px;
+              border-radius: 50%;
+              background-color: #eee;
+              content: '';
+              z-index: -100;
+            }
+            // border: 1px solid #000;
+          } // a
+        } // li
+      } // ul
+    } // nav
+  } // header
+} // wrap

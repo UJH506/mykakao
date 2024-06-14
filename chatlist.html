@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>채팅</title>
+  <link rel="stylesheet" href="./css/chatlist.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css">
+  <script defer src="./js/chatlist.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div class="statusbar">
+      <span class="clock">11:07</span>
+
+      <ul>
+        <li><i class="fa-solid fa-signal"></i></li>
+        <li><i class="fa-solid fa-wifi"></i></li>
+        <li><i class="fa-solid fa-battery-three-quarters"></i></li>
+      </ul>
+    </div>
+
+    <header>
+      <h1>채팅</h1>
+
+      <nav>
+        <ul>
+          <li><a href="./search.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+          <li><a href="#"><i class="fa-solid fa-user-plus"></i></a></li>
+          <li><a href="./setting.html"><i class="fa-solid fa-gear"></i></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <h2 class="sr-only">채팅목록</h2>
+      <ul> <!-- 채팅목록리스트 -->
+
+        <li>
+          <a href="./talk1.html">
+            <p class="pic">프로필사진</p>
+            <div class="info">
+              <span class="name">🐹💙</span>
+              <span class="intro">저 빛나는 별처럼 (Ah, ah, ah)</span>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="./talk2.html">
+            <p class="pic alarm">프로필사진</p>
+            <div class="info">
+              <span class="name">대장</span>
+              <span class="intro">너와의 추억들로 가득 채울래 (come on!) 아무 걱정도 하지는 마, 나에게 다 맡겨 봐 지금 이 순간이 다시 넘겨볼 수 있는 한 페이지가 될 수 있게 Yah, yeah-oh, yah, yo-oh, this is our page Yah, yeah-oh, yah, yo-oh, our page</span>
+            </div>
+            <i class="fa-solid fa-circle-exclamation"></i>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <p class="pic">프로필사진</p>
+            <div class="info">
+              <span class="name">모자</span>
+              <p class="intro">아름다운 청춘의 한 장 함께 써내려 가자 너와의 추억들로 가득 채울래 (come on!) 아무 걱정도 하지는 마, 나에게 다 맡겨 봐 지금 이 순간이 다시 넘겨볼 수 있는 한 페이지가 될 수 있게</p>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+    </section>
+
+    <footer>
+      <ul>
+        <li><a href="./index.html"><i class="fa-regular fa-user"></i></a></li>
+        <li><a href="./chatlist.html"><i class="fa-solid fa-comments"></i></a></li>
+        <li><a href="./more.html"><i class="fa-solid fa-ellipsis"></i></a></li>
+      </ul>
+    </footer>
+  </div>
+
+  <div id="addfriend"> <!--친추화면-->
+    <div class="statusbar"> <!--상단바-->
+      <span class="clock">11:07</span>
+
+      <ul>
+        <li><i class="fa-solid fa-signal"></i></li>
+        <li><i class="fa-solid fa-wifi"></i></li>
+        <li><i class="fa-solid fa-battery-three-quarters"></i></li>
+      </ul>
+    </div>
+    
+    <header>
+      <div class="top">
+        <span><i class="fa-solid fa-angle-left"></i></span>
+        <h1>친구 추가</h1>
+      </div>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="#">
+              <span><i class="fa-solid fa-qrcode"></i></span>
+              QR코드
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span><i class="fa-regular fa-address-book"></i></span>
+              연락처
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span><i class="fa-regular fa-id-badge"></i></span>
+              카카오톡 ID
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <script>
+    // 실시간시계
+    const $clock = document.querySelector('.statusbar>.clock');
+    const realtime = new Date();
+    let hour = realtime.getHours()%12;
+    let minutes = realtime.getMinutes();
+
+    if(hour<10) {
+      hour = '0'+hour;
+    }else{
+      hour = hour;
+    }
+
+    if(minutes<10) {
+      minutes = '0'+minutes;
+    }else{
+      minutes = minutes;
+    }
+    $clock.textContent = `${hour}:${minutes}`;
+  </script>
+</body>
+</html>

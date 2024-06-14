@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+@mixin flexLayout($direction:row, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin varwidth() {
+  width: 100%;
+  max-width: 992px;
+}
+
+@mixin bgiCenter() {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}

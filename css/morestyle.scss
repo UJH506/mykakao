@@ -1,0 +1,9 @@
+@charset "utf-8";
+@import "./_status", "./_header", "./_footer", "./reset", "./mixin";
+
+#wrap {
+  @include varwidth();
+  margin: 0 auto;
+
+  >footer>ul>li:last-child>a {color: #222;}
+}

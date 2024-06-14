@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>설정</title>
+  <link rel="stylesheet" href="./css/setting.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css">
+  <script defer src="./js/setting.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div class="statusbar">
+      <span class="clock">11:07</span>
+
+      <ul>
+        <li><i class="fa-solid fa-signal"></i></li>
+        <li><i class="fa-solid fa-wifi"></i></li>
+        <li><i class="fa-solid fa-battery-three-quarters"></i></li>
+      </ul>
+    </div>
+
+    <header>
+      <span><i onclick="window.history.back();" class="fa-solid fa-angle-left"></i></span>
+      <h1>설정</h1>
+    </header>
+
+    <section>
+      <h2>알림</h2>
+      
+      <ul>
+        <li>
+          <a href="#">
+            알림음
+            <span>카톡<i class="fa-solid fa-angle-right"></i></span>
+          </a>
+          
+        </li>
+
+        <li>
+          미리보기
+          <div class="toggle">
+            <input type="checkbox" name="preview" id="preview">
+            <label for="preview">미리보기</label>
+          </div>
+        </li>
+
+        <li>
+          앱 실행 중 알림
+          <div class="toggle">
+            <input type="checkbox" name="popup" id="popup">
+            <label for="popup">알림</label>
+          </div>
+        </li>
+      </ul>
+
+      <h2>친구</h2>
+      <ul>
+        <li>
+          자동 친구 추가
+          <div class="toggle">
+            <input type="checkbox" name="addfriend" id="addfriend">
+            <label for="addfriend">친구추가</label>
+          </div>
+        </li>
+
+        <li>
+          <a href="#" class="friendrefresh">
+            친구 목록 새로고침
+            <span>
+              <i class="fa-solid fa-rotate"></i>
+            </span>
+          </a>
+        </li>
+
+        <li>
+          친구 추천 허용
+          <div class="toggle">
+            <input type="checkbox" name="Recommend" id="Recommend">
+            <label for="Recommend">친구추천</label>
+          </div>
+        </li>
+      </ul>
+
+      <h2>채팅</h2>
+      <ul>
+        <li>
+          <a href="#">
+            대화백업
+            <span><i class="fa-solid fa-angle-right"></i></span>
+          </a>
+          
+        </li>
+
+        <li>
+          <a href="#">
+            미디어 화질
+            <span>원본<i class="fa-solid fa-angle-right"></i></span>
+          </a>
+        </li>
+
+        <li>
+          스와이프로 답장하기
+
+          <div class="toggle">
+            <input type="checkbox" name="swipe" id="swipe">
+            <label for="swipe">스와이프</label>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    
+  </div>
+
+  <script>
+    // 실시간시계
+    const $clock = document.querySelector('.statusbar>.clock');
+    const realtime = new Date();
+    let hour = realtime.getHours()%12;
+    let minutes = realtime.getMinutes();
+
+    if(hour<10) {
+      hour = '0'+hour;
+    }else{
+      hour = hour;
+    }
+
+    if(minutes<10) {
+      minutes = '0'+minutes;
+    }else{
+      minutes = minutes;
+    }
+    $clock.textContent = `${hour}:${minutes}`;
+  </script>
+</body>
+</html>

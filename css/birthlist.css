@@ -1,0 +1,166 @@
+@import "./reset.css";
+@import "./reset.css";
+#addfriend > .statusbar,
+#wrap > .statusbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 992px;
+  height: 24px;
+  background-color: #fff;
+  z-index: 100;
+}
+#addfriend > .statusbar > .clock,
+#wrap > .statusbar > .clock {
+  position: absolute;
+  left: 20px;
+  font-size: 16px;
+  font-weight: 800;
+}
+#addfriend > .statusbar > ul,
+#wrap > .statusbar > ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  right: 15px;
+}
+#addfriend > .statusbar > ul > li,
+#wrap > .statusbar > ul > li {
+  margin: 0 4px;
+  font-size: 16px;
+}
+
+#addfriend > .statusbar,
+#wrap > .statusbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 992px;
+  height: 24px;
+  background-color: #fff;
+  z-index: 100;
+}
+#addfriend > .statusbar > .clock,
+#wrap > .statusbar > .clock {
+  position: absolute;
+  left: 20px;
+  font-size: 16px;
+  font-weight: 800;
+}
+#addfriend > .statusbar > ul,
+#wrap > .statusbar > ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  right: 15px;
+}
+#addfriend > .statusbar > ul > li,
+#wrap > .statusbar > ul > li {
+  margin: 0 4px;
+  font-size: 16px;
+}
+
+#wrap > header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 24px;
+  width: 100%;
+  max-width: 992px;
+  height: 56px;
+  background-color: #fff;
+}
+#wrap > header > span {
+  position: absolute;
+  left: 12px;
+}
+#wrap > header > span > i {
+  font-size: 20px;
+}
+#wrap > header > span > i:hover {
+  color: #888;
+}
+#wrap > header > h1 {
+  font-size: 20px;
+}
+
+#wrap {
+  width: 100%;
+  max-width: 992px;
+  margin: 0 auto;
+}
+#wrap section {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  max-width: 992px;
+}
+#wrap section > h2 {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  color: #999;
+  font-size: 12px;
+  font-weight: normal;
+}
+#wrap section > ul {
+  display: grid;
+  grid-template-rows: repeat(1, 75px);
+  grid-auto-rows: 75px;
+  margin-bottom: 10px;
+}
+#wrap section > ul.today {
+  grid-template-rows: repeat(1, 90px);
+  grid-auto-rows: 90px;
+}
+#wrap section > ul.today > li {
+  height: 90px;
+}
+#wrap section > ul.today > li > a > .pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+}
+#wrap section > ul.today > li > a > .name {
+  font-size: 17px;
+  font-weight: 600;
+}
+#wrap section > ul > li {
+  height: 75px;
+}
+#wrap section > ul > li > a {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 100%;
+  padding: 0 40px 0 25px;
+}
+#wrap section > ul > li > a > .pic {
+  width: 50px;
+  height: 50px;
+  text-indent: -9999px;
+  background-color: #eee;
+  border-radius: 17px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#wrap section > ul > li > a > .name {
+  margin-left: 12px;
+  font-size: 15px;
+  font-weight: 500;
+}/*# sourceMappingURL=birthlist.css.map */

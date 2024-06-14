@@ -1,0 +1,32 @@
+// 생일인친구, 설정, 채팅방서랍 헤더
+@charset "utf-8";
+@import "./reset.css", "./status", "./_mixin";
+
+#wrap {
+  >header {
+    @include flexLayout();
+    @include flexCenter();
+    position: absolute;
+    top: 24px;
+    @include varwidth();
+    height: 56px;
+    background-color: #fff;
+
+    >span {
+      position: absolute;
+      left: 12px;
+      
+      >i {
+        font-size: 20px;
+
+        &:hover {
+          color: #888;
+        }
+      }
+    } //span
+
+    >h1 {
+      font-size: 20px;
+    } //h1
+  } //header
+}

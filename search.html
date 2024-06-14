@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색</title>
+    <link rel="stylesheet" href="./css/searchstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css">
+    <script defer src="./js/search.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <div class="statusbar">
+      <span class="clock">11:07</span>
+
+      <ul>
+        <li><i class="fa-solid fa-signal"></i></li>
+        <li><i class="fa-solid fa-wifi"></i></li>
+        <li><i class="fa-solid fa-battery-three-quarters"></i></li>
+      </ul>
+    </div>
+    
+    <section>
+      <h2 class="sr-only">검색</h2>
+      <div class="search">
+        <input type="text" name="search" id="search" placeholder="검색">
+        <button type="button" onclick="history.back();">취소</button>
+      </div>
+
+      <div class="recent">
+        <h1>최근 검색</h1>
+
+        <ul>
+          <li>
+            <a href="">
+              <p class="pic">프사</p>
+              <span class="name">햄토리</span>
+              <i class="fa-solid fa-xmark"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <p class="pic">프사</p>
+              <span class="name">대장</span>
+              <i class="fa-solid fa-xmark"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <p class="pic">프사</p>
+              <span class="name">모자</span>
+              <i class="fa-solid fa-xmark"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="find">
+        <h1>찾아보기</h1>
+
+        <ul>
+          <li>
+            <a href="">
+              <p class="pic">프사</p>
+              <span class="name">지민</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <p class="pic">프사</p>
+              <span class="name">민정</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <p class="pic">프사</p>
+              <span class="name">해린</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <p class="pic">프사</p>
+              <span class="name">민지</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <p class="pic">프사</p>
+              <span class="name">하니</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <p class="pic">프사</p>
+              <span class="name">재도</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="keypad">
+        <img src="./images/keyboard.jpg" alt="키보드">
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // 실시간시계
+    const $clock = document.querySelector('.statusbar>.clock');
+    const realtime = new Date();
+    let hour = realtime.getHours()%12;
+    let minutes = realtime.getMinutes();
+
+    if(hour<10) {
+      hour = '0'+hour;
+    }else{
+      hour = hour;
+    }
+
+    if(minutes<10) {
+      minutes = '0'+minutes;
+    }else{
+      minutes = minutes;
+    }
+    $clock.textContent = `${hour}:${minutes}`;
+  </script>
+</body>
+</html>

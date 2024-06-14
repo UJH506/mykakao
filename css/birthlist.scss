@@ -1,0 +1,78 @@
+@charset "utf-8";
+@import "./reset.css", "./status", "./_mixin", "./subheader";
+
+#wrap {
+  @include varwidth();
+  margin: 0 auto;
+
+  section {
+    position: absolute;
+    top: 80px;
+    @include varwidth();
+    // border: 1px solid #000;
+
+    >h2 {
+      margin-bottom: 10px;
+      padding-left: 25px;
+      color: #999;
+      font-size: 12px;
+      font-weight: normal;
+    }
+    >ul {
+      display: grid;
+      grid-template-rows: repeat(1, 75px);
+      grid-auto-rows: 75px;
+      margin-bottom: 10px;
+
+      &.today {
+        grid-template-rows: repeat(1, 90px);
+        grid-auto-rows: 90px;
+        //여기크기키우고, 축하애니메이션
+
+        >li {
+          height: 90px;
+
+          >a {
+
+            >.pic {
+              width: 60px;
+              height: 60px;
+              border-radius: 20px;
+            }
+
+            >.name {
+              font-size: 17px;
+              font-weight: 600;
+            }
+          } //a
+        } //li
+      } //.today
+
+      >li {
+        height: 75px;
+
+        >a {
+          @include flexLayout();
+          align-items: center;
+          height: 100%;
+          padding: 0 40px 0 25px;
+
+          >.pic {
+            width: 50px;
+            height: 50px;
+            text-indent: -9999px;
+            background-color: #eee;
+            border-radius: 17px;
+            @include bgiCenter();
+          } //.pic
+
+          >.name {
+            margin-left: 12px;
+            font-size: 15px;
+            font-weight: 500;
+          } //.name
+        } //a
+      } //li 
+    } //ul
+  } //section
+}
